@@ -1,0 +1,9 @@
+cryptography==36.0.1
+Faker==13.3.2
+Flask==2.0.3
+Flask-SQLAlchemy==2.5.1
+Jinja2==3.0.3
+PyMySQL==1.0.2
+python-dateutil==2.8.2
+SQLAlchemy==1.4.32
+

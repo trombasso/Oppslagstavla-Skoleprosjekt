@@ -1,0 +1,25 @@
+{% extends 'layout.html' %} {% block body %}
+{% include 'nav.html' %}
+
+
+<section>
+  <div class="innlegg item">
+    <div class="kat">
+      {% for elem in kat %} {% if tavle.kategori == elem.kat_id %} {{elem.navn}}
+      {% endif %} {% endfor %}
+    </div>
+    <div class="tittel">{{tavle.tittel}}</div>
+    <div class="ingress">{{tavle.ingress}}</div>
+    
+    <div class="oppslagstekst"><hr>{{tavle.oppslagstekst}}<hr></div>
+    
+    <div class="info">
+      <a href="/delete={{ tavle.id }}"><img class="small-btn" src="../static/images/delete.png" alt="Delete post"></a>
+      <a href="#"><img class="small-btn" src="../static/images/edit.png" alt="Edit Post"></a>
+      Lagt inn av:{{tavle.bruker}} den {{tavle.dato}}. Antall treff: {{tavle.treff}}</div>
+  
+  
+  </div>
+</section>
+
+{% endblock %}

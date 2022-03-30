@@ -1,0 +1,25 @@
+{% extends 'layout.html' %} {% block body %}
+{% include 'nav.html' %}
+
+<section>
+  {% for category, message in get_flashed_messages(with_categories=true) %}
+  <div class="alert {{ category }}">
+  {{ message }}
+  </div>
+  {% endfor %}
+
+
+  {% for item in tavle %}
+  <a class="innlegg" href="/item={{item.id}}">
+        <div class="kat">
+          {% for elem in kat %} {% if item.kategori == elem.kat_id %} {{elem.navn}}
+          {% endif %} {% endfor %}
+        </div>
+        <div class="tittel">{{item.tittel}}</div>
+        <div class="ingress">«{{item.ingress}}»</div>
+        <div class="info">Lagt inn av: {{item.bruker}} den {{item.dato}}. Antall treff: {{item.treff}}</div>
+  </a>
+  {% endfor %}
+</section>
+
+{% endblock %}

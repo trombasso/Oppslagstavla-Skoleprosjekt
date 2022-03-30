@@ -1,0 +1,190 @@
+:root {
+  --headline-color: rgb(130, 168, 171);
+  --background: rgb(0, 70, 76);
+  --box-header-color: rgb(0, 43, 47);
+  --container: rgb(0, 116, 139);
+  --box-color: rgb(0, 132, 128);
+  --box-highlight-color: rgb(1, 179, 173);
+  --text-color: #FFF;
+  --muted-text-color:rgb(7, 93, 110);
+  --muted-text-color_2:rgb(11, 131, 155);
+
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+header {
+  grid-area: header;
+  background: var(--box-header-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: right;
+  padding-right: 20px;
+  border-radius: 10px;
+  height: 120px;
+}
+
+header h1 {
+  color: var(--headline-color);
+}
+
+header h4 {
+  color: var(--muted-text-color_2);
+}
+
+footer {
+  grid-area: footer;
+  background: var(--box-header-color);
+  padding-right: 20px;
+  border-radius: 10px;
+  height: 50px;
+}
+
+.footertext {
+  color: var(--muted-text-color);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8em;
+  text-align: right;
+  margin-top: 17px;
+
+}
+
+nav {
+  grid-area: nav;
+  padding-top: 10px;
+  text-align: center;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav img {
+  width: 50px;
+}
+
+section {
+  grid-area: section;
+  width: auto;
+}
+
+.container {
+  display: grid;
+  grid-auto-columns: 195px auto auto;
+  grid-template-areas:
+    "header header header"
+    "nav section section"
+    "footer footer footer";
+  gap: 10px;
+  background: var(--container);
+  max-width: 800px;
+  margin: auto;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+
+
+.innlegg {
+  display: grid;
+  grid-template-areas:
+  "tittel tittel kat"
+  "ingress ingress ingress"
+  "oppslag oppslag oppslag"
+  "info info info";
+  background: var(--box-color);
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+.alert {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+.warning {
+  background: rgb(85, 161, 70);
+}
+
+.innlegg:hover {
+  background-color: var(--box-highlight-color);
+}
+
+.small-btn {
+  width: 20px;
+  margin: 2px;
+}
+
+.item {
+  background-color: var(--box-highlight-color);
+}
+
+
+.kat {
+  text-align: right;
+  grid-area: kat;
+  color: var(--muted-text-color);
+}
+.tittel {
+  text-align: left;
+  grid-area: tittel;
+  color: var(--muted-text-color);
+}
+.ingress {
+  text-align: center;
+  grid-area: ingress;
+  padding: 10px;
+  color: var(--text-color);
+}
+.oppslagstekst {
+  grid-area: oppslag;
+  text-align: justify;
+  padding: 10px;
+  color: var(--text-color)
+}
+.info {
+  grid-area: info;
+  display: flex;
+  align-items:center;
+  justify-content: flex-end;
+  font-size: 0.7em;
+  color: var(--muted-text-color);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: space-evenly;
+  border: none;
+  border-radius: 20px;
+  width: 180px;
+  padding: 5px;
+  background-color: rgb(0, 63, 71);
+  color: #FFF;
+  margin-bottom: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8em;
+}
+
+.button:hover {
+  background-color: rgb(3, 104, 117);
+}

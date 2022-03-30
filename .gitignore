@@ -1,0 +1,9 @@
+.python-version
+config_local.ini
+config_uit.ini
+config.ini
+error.log
+static/.DS_Store
+static/images/.DS_Store
+.DS_Store
+flask_app.wsgi

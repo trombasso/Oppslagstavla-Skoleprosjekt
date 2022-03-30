@@ -1,0 +1,9 @@
+<nav>
+    {% for elem in kat%}
+    <a href="../search={{ elem.kat_id }}"><div class="button">{{ elem.navn }}</div></a>
+    {% endfor %}
+
+    <a href="../"><div class="button">Alle innlegg</div></a>
+
+    <a href="/innlegg"><div class="button"><img src="/static/images/create.png" alt="Lag nytt innlegg!">Nytt Innlegg</div></a>
+</nav>
